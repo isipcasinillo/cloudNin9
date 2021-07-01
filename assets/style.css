@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding:0;
+}
+
+
+.main {
+    display: flex;
+    max-width: 90%;
+    margin: auto;
+    margin-top: 100px;
+}
+
+
+.weekly-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    
+}
+
+.weekly-container div {
+    padding-right: 20px;;
+    
+}
+
+.circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 400px;
+    width: 400px;
+    border: rgb(90, 90, 90) solid 1px;
+    border-radius: 200px;
+    background-color: rgba(240, 248, 255, 0);
+}
+.current-container {
+    margin-top: 20px;
+    padding: 0 20px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    width: 480;
+    height: 700px;
+    background-color: rgb(160, 160, 160);
+}
+#current-temp {
+    font-size: 140px;
+}
+#current-name {
+    font-size: 55px;
+    display: flex;
+    justify-content: center;
+}
+.current-search {
+    display: flex;
+    width:400px;
+    justify-content: center;
+    margin-bottom: 90px;
+}
+
+#input-key {
+    width: 350px;
+    height: 40px;
+    font-size: 20px;
+}
+#submit-btn {
+    width:160px;
+}
+
+.day-card span, div {
+    font-size: 20px;
+}
+
+.day-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 160px;
+    height: 200px;
+    margin-left: 15px;
+    background-color: rgb(167, 224, 243);
+    border-radius: 20px;
+}
+
+.day-card span:nth-child(1){
+    margin:  0 auto;
+    padding-bottom: 10px;
+}
+.day-card > * {
+    text-align: start;
+    padding: 0 20px 0 20px;
+}
+
+
+.weekly-container div:nth-child(1) {
+    margin-left: 15px;
+    
+}
+.weekly-container div:last-child {
+    margin-right: 15px;
+    
+}
+.section {
+    display:flex;
+    flex-direction: column;
+    margin-top: 20px;
+    justify-content: center;
+    background-color: rgb(190, 190, 190);   
+    width: 1440px;
+}
+
+.webstyle {
+    background-color: rgb(241, 221, 221);
+    height: 600px;
+}
+
+button {
+    height: 45px;
+    width: 90px;
+}
+
+.inner_webstyle {
+    width:95%;
+    margin: 90px auto 0 auto;
+    justify-content: center;
+    background-color: rgb(185, 185, 216);
+}
+.weekly-card {
+    margin-left: 15px;
+    font-size: 40px;
+    padding: 20px 0;
+}
+.history {
+    width:95%;
+    margin: auto;
+    border-bottom: black 1px solid;
+}
