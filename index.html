@@ -15,67 +15,65 @@
         
         <section class="current-container">
             <div class="current-search">
-                <input type="text" id="input-key" placeholder="Enter city here">
+                <input type="text" id="input-key" placeholder="             Enter city here">
                 <input type="submit" id="submit-btn" value="Search">
             </div>
             <div class="circle">
-                <div id="current-temp">75°F</div>
-                <div>UVI: <span id="current-uvi">1.72</span></div>
-                <div>H: <span id="current-humi">86%</span></div>
+                <div id="current-temp" class="ftemp">75°F</div>
+                <div>UVI: <span id="current-uvi" class="fuvi">1.72</span></div>
+                <div>H: <span id="current-humi" class="fhumi">86%</span></div>
             </div>
-            <div>
-                <span id="current-name">Grand Prairie</span>
-            </div>
+            <div id="current-name">Grand Prairie</div>
         </section>
     
 
          <!-- WEEKLY FORECAST SECTION -->
         <section class="section">
             <div class="webstyle">
-                <div class="history">
-                    <button>Manila</button>
+                <span class="history" id="history">
+                    <!-- <button>Manila</button>
                     <button>New York</button>
                     <button>Grand Prairie</button>
-                    <button>Los Angeles</button>
-                </div>
+                    <button>Los Angeles</button> -->
+                    </span>
                 <div class="inner_webstyle">
                     <h1 class="weekly-card">WEEKLY FORECAST</h1>
                     <div class="weekly-container">
                         <div class="day-card">
-                            <span>Tuesday</span>
-                            <div>Temp: <span>75°F</span></div>
-                            <div>Uvi: <span>1.62</span></div>
-                            <div>Humi: <span>116%</span></div>
+                            <span class="fdate">Tuesday</span>
+                            <div>Temp: <span class="ftemp">75°F</span></div>
+                            <div>Uvi: <span class="fuvi">1.62</span></div>
+                            <div>Humi: <span class="fhumi">56%</span></div>
                         </div>
                         <div class="day-card">
-                            <span>Wednesday</span>
-                            <div>Temp: <span>75°F</span></div>
-                            <div>Uvi: <span>1.62</span></div>
-                            <div>Humi: <span>56%</span></div>
+                            <span class="fdate">Wednesday</span>
+                            <div>Temp: <span class="ftemp">75°F</span></div>
+                            <div>Uvi: <span class="fuvi">1.62</span></div>
+                            <div>Humi: <span class="fhumi">56%</span></div>
                         </div>
                         <div class="day-card">
-                            <span>Thursday</span>
-                            <div>Temp: <span>75°F</span></div>
-                            <div>Uvi: <span>1.62</span></div>
-                            <div>Humi: <span>56%</span></div>
+                            <span class="fdate">Thursday</span>
+                            <div>Temp: <span class="ftemp">75°F</span></div>
+                            <div>Uvi: <span class="fuvi">1.62</span></div>
+                            <div>Humi: <span class="fhumi">56%</span></div>
                         </div>
                         <div class="day-card">
-                            <span>Friday</span>
-                            <div>Temp: <span>75°F</span></div>
-                            <div>Uvi: <span>1.62</span></div>
-                            <div>Humi: <span>56%</span></div>
+                            <span class="fdate">Friday</span>
+                            <div>Temp: <span class="ftemp">75°F</span></div>
+                            <div>Uvi: <span class="fuvi">1.62</span></div>
+                            <div>Humi: <span class="fhumi">56%</span></div>
                         </div>
                         <div class="day-card">
-                            <span>Saturday</span>
-                            <div>Temp: <span>75°F</span></div>
-                            <div>Uvi: <span>1.62</span></div>
-                            <div>Humi: <span>56%</span></div>
+                            <span class="fdate">Saturday</span>
+                            <div>Temp: <span class="ftemp">75°F</span></div>
+                            <div>Uvi: <span class="fuvi">1.62</span></div>
+                            <div>Humi: <span class="fhumi">56%</span></div>
                         </div>
                         <div class="day-card">
-                            <span>Sunday</span>
-                            <div>Temp: <span>75°F</span></div>
-                            <div>Uvi: <span>1.62</span></div>
-                            <div>Humi: <span>56%</span></div>
+                            <span class="fdate">Sunday</span>
+                            <div>Temp: <span class="ftemp">75°F</span></div>
+                            <div>Uvi: <span class="fuvi">1.62</span></div>
+                            <div>Humi: <span class="fhumi">56%</span></div>
                         </div>
                     </div>
                 </div>
@@ -84,5 +82,7 @@
         
 </main>
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.js"></script>
 <script src="assets/script.js"></script>
+
 </html>
