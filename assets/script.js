@@ -17,7 +17,8 @@ const cityListHandler = document.getElementById('history')
 
 // MAIN FUNCTION API //
 function getWeather(city){
-    pastcall(city);
+    // pastcall(city);
+    
     fetch(
         'https://api.openweathermap.org/data/2.5/weather?q='+ city +'&appid=4b32bc002f15ef905283bad751a35660'
     ).then((response) => {
@@ -43,7 +44,7 @@ function getWeather(city){
         fetch('https://api.openweathermap.org/data/2.5/onecall?lat=' + lat + '&lon=' + lon + '&units=imperial&exclude=minutely&appid=4b32bc002f15ef905283bad751a35660')
         .then((response) => response.json())
         .then((data) => {
-
+            console.log(data)
             // dynamically updates the temp, uvi, humidity on the weekly forecast //
             displayForecast(data)
         })
@@ -80,6 +81,25 @@ function addCity (city) {
 
 // } 
 
+
+
+submitEl.addEventListener('click', () => {
+    var city = document.getElementById('input-key').value
+    getWeather(city)
+    
+    
+})
+
+cityListHandler.addEventListener('click', function (event) {
+   var currentcity = event.target.textContent
+    getWeather(currentcity)
+})
+
+
+
+
+// getWeather('manila');
+
 function appendCity () {
     var cities = JSON.parse(localStorage.getItem('city')) || [];
     for (var i = 0; i < cities.length; i++) {
@@ -91,17 +111,21 @@ function appendCity () {
     }
 }
 
-submitEl.addEventListener('click', () => {
-    var city = document.getElementById('input-key').value
-    getWeather(city)
-})
+function retrieveCity () {
+    if (!JSON.parse(localStorage.getItem('city'))) { 
+        console.log('its empty')
+        initialeCity ();
+    } else {
+        var cityY = JSON.parse(localStorage.getItem('city'))
+    var cityJ = cityY[cityY.length-1]
+    getWeather(cityJ)
+    }
+}
 
-cityListHandler.addEventListener('click', function (event) {
-   var currentcity = event.target.textContent
-    getWeather(currentcity)
-})
+function initialeCity () {
+    getWeather('grand prairie')
+}
 
 
 appendCity();
-
-// getWeather('manila');
+retrieveCity ();
